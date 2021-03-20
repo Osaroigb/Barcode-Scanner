@@ -1,10 +1,11 @@
 # import required modules
 from flask import Flask, render_template, redirect, url_for, request, flash
 import requests
+import os
 
 # setup flask application
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "8BYkEfBA6O6donWlSihBXox7C0sKR6b"
+app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
 
 
 # home route
